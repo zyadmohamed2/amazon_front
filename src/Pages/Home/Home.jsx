@@ -7,7 +7,7 @@ import MySwiper5 from "../../Components/Swiper5/MySwiper5";
 import MySwiper1 from "../../Components/Swiper1/MySwiper1";
 import MySwiper2 from "../../Components/Swiper2/MySwiper2";
 import ScrollToTopButton from "../../Components/ScrollButton/ScrollButton";
-import MyForm from "../../Components/FORM/MYForm";
+import MyForm from "../../Components/FORM/MyForm";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
