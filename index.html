@@ -1,0 +1,33 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="article" />
+    <meta name="robots" content="index , follow " />  
+    <link rel="canonical" href="https://sysar.online/" />  
+    <title>AMAZON MARIN</title>
+  </head>
+  <body>
+    <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // تحديد اللغة (يمكنك استبدال هذه القيمة بمنطق أكثر تعقيدًا لتحديد اللغة)
+      const userLanguage = localStorage.getItem("lang");
+
+      // تحديد عنصر HTML
+      const htmlElement = document.documentElement;
+      
+      const root1 = document.getElementById("root");
+      // تعيين سمة lang بناءً على اللغة المحددة
+      htmlElement.lang = userLanguage;
+      if (userLanguage === 'ar' || userLanguage === 'he') {
+        htmlElement.dir = "rtl"; 
+        htmlElement.lang="ar";// اتجاه من اليمين إلى اليسار (للغة العربية والعبرية)  
+         } else {
+         htmlElement.dir = 'ltr'; // اتجاه من اليسار إلى اليمين (للغات الأخرى)
+         }
+  </script>
+  </body>
+</html>
