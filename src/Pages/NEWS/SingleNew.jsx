@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -25,7 +24,7 @@ export default function SingleNew() {
         console.log(res.data);
         setproduct(res.data);
       });
-  }, []);
+  }, [id,language]);
 
   return (
     <div className="container news"    dir={language === 'ar' ? 'rtl' : 'ltr'}>

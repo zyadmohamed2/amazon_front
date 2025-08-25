@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useState } from "react";
 import { useRef , useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
@@ -7,7 +7,6 @@ import "./Swiper.scss";
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
-import { TranslateContext } from "../../utils/TranslateContext";
 
 
 
@@ -34,7 +33,7 @@ export default function MySwiper() {
                 console.log(res.data);
                 setItem(res.data);
               });
-          }, []);
+          }, [language]);
   var settings = {
     dots: true,
     infinite: false,
@@ -75,7 +74,6 @@ export default function MySwiper() {
       <link
         rel="stylesheet"
         type="text/css"
-        charset="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
       <link

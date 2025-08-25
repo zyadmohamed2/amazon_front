@@ -1,4 +1,3 @@
-import React from 'react'
 import Slider from "react-slick";
 import './index2.scss'
 import { useState,useEffect } from 'react';
@@ -36,24 +35,23 @@ export default function MySwiper2() {
       <div>
 
       <link
-        rel="stylesheet"
-        type="text/css"
-        charset="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
 
 
       <Slider {...settings}>
           {
             images.map((image,index) => (
-              <div className='main5'>
+              <div key={index} className='main5'>
               <div>
-                <img src={image.photoPath} className='img55' alt='best shipping company amazon marin'  /> 
+                <img  src={image.photoPath} className='img55' alt='best shipping company amazon marin'  /> 
               </div>
               </div>
             ))

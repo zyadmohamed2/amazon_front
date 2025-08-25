@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
@@ -58,8 +57,7 @@ export default function MySwiper1() {
             console.log(res.data);
             setSolutions(res.data);
           });
-      }, []);
-
+      }, [language]);
 
 
 
@@ -69,7 +67,6 @@ export default function MySwiper1() {
       <link
         rel="stylesheet"
         type="text/css"
-        charset="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
       <link

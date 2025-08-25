@@ -1,9 +1,7 @@
 import "./Home.scss";
 import axios from "axios";
-import { Children, useEffect, useState } from "react";
-import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 import MySwiper from "../../Components/Swiper 3/MySwiper";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MySwiper4 from "../../Components/Swiper4/MySwiper4";
 import MySwiper5 from "../../Components/Swiper5/MySwiper5";
 import MySwiper1 from "../../Components/Swiper1/MySwiper1";
@@ -18,7 +16,7 @@ import { Helmet } from "react-helmet";
 export default function Home() {
   const { t } = useTranslation("global");
   const  userLang = localStorage.getItem("lang");
-  const [homeProduct, setHomeProduct] = useState([]);
+  // const [homeProduct, setHomeProduct] = useState([]);
   const [nameTags, setNameTags] = useState([]);
 
   useEffect(() => {
@@ -30,7 +28,7 @@ export default function Home() {
       })
       .then((res) => {
         console.log(res.data);
-        setHomeProduct(res.data);
+        // setHomeProduct(res.data);
       });
   }, []);
 

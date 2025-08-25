@@ -1,25 +1,20 @@
-import React from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "./myform.scss";
 import "react-phone-number-input/style.css";
-// import parsePhoneNumber from "libphonenumber-js";
-// import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { $countries } from "../../recoilstore";
-import axios from "axios"
+import axios from "axios";
 import Swal from "sweetalert2";
-import {useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function MYForm() {
   const { t } = useTranslation("global");
   const [countries] = useRecoilState($countries);
-  const  userLang = localStorage.getItem("lang");
+  const userLang = localStorage.getItem("lang");
   const handleRefresh = () => {
     window.location.reload();
   };
-  const navigate = useNavigate();
   const initialValues = {
     FirstName: "",
     LastName: "",
@@ -52,7 +47,7 @@ export default function MYForm() {
     });
 
     
-    const sendData = async (values, { setSubmitting, setErrors}) => {
+    const sendData = async (values) => {
       const data = {
         FirstName: values.FirstName,
         LastName: values.LastName,
@@ -79,20 +74,17 @@ export default function MYForm() {
         console.log('Response:', response.data);
         console.log(response.data);
         Swal.fire({
-                icon: "success",
-              }); 
+          icon: "success",
+        }); 
       setTimeout(handleRefresh, 1500);          
       } catch (error) {
         console.error('Error:', error.response?.data || error.message);
         Swal.fire({
           icon: "error",
-        });       
-      }
+        });}
     };
-  
 
-    
-   
+
   return (
     <div className="container" >
       <Formik dir={userLang === 'ar' ? 'rtl' : 'ltr'}
@@ -113,7 +105,7 @@ export default function MYForm() {
                   placeholder={t("text.please enter your first name")}
                 />
                 <ErrorMessage
-                  name=" FirstName"
+                  name="FirstName"
                   // component="div"
                   className="error"
                 />

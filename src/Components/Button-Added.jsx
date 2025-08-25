@@ -1,4 +1,5 @@
 import { useCart } from './CartContext';
+import PropTypes from 'prop-types';
 
 const AddToCartButton = ({ Products }) => {
   const { addToCart } = useCart();
@@ -8,6 +9,10 @@ const AddToCartButton = ({ Products }) => {
       Add to Cart
     </button>
   );
+};
+
+AddToCartButton.propTypes = {
+  Products: PropTypes.object.isRequired,
 };
 
 export default AddToCartButton;

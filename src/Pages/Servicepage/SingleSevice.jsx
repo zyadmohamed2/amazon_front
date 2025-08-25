@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -27,7 +26,7 @@ export default function SingleSevice() {
         setItem(res.data);
         setServices(res.data.serviceList);
       });
-  }, [1]);
+  }, [id,language]);
 
 
   return (
@@ -41,7 +40,7 @@ export default function SingleSevice() {
           src={item.photoPath}
           className="serviceimage"
         />
-        <div class="serviceoverlay">
+        <div className="serviceoverlay">
           <h1 className="text-sm-center   hservice" style={{color:"black",fontWeight:"bolder",fontSize:"45px"}}>
             {item.name}
           </h1>

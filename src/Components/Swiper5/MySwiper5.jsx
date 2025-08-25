@@ -1,4 +1,3 @@
-import React from 'react'
 import Slider from "react-slick";
 import"./index5.scss"
 import { useState,useEffect } from 'react';
@@ -21,7 +20,7 @@ export default function MySwiper5() {
         console.log(res.data);
         setData(res.data);
       });
-  }, []);
+  }, [language]);
 
     var settings = {
         dots: true,
@@ -59,17 +58,17 @@ export default function MySwiper5() {
       };
   return (
     <div>
-        <link
-        rel="stylesheet"
-        type="text/css"
-        charset="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
+       <link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
+
       <div className="slider-container">
       <Slider {...settings}>
         {

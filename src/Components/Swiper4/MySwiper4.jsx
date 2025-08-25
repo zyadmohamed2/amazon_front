@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import Card from "react-bootstrap/Card";
 import "./index4.scss";
@@ -24,7 +23,7 @@ export default function MySwiper4() {
         console.log(res.data);
         setNews(res.data);
       });
-  }, []);
+  }, [language]);
 
   var settings = {
     dots: false,
@@ -65,16 +64,16 @@ export default function MySwiper4() {
   return (
     <div>
       <link
-        rel="stylesheet"
-        type="text/css"
-        charset="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
+
       <div className="container">
         <Slider {...settings}>
 
